@@ -52,7 +52,7 @@
 
 
 ## Salt Install Guide: Linux (DEB)
-Artikkelissa ohjeistetaan hieman tarkemmin Salt-menetelmän asentamista Linux-koneelle.
+Artikkelissa ohjeistetaan hieman tarkemmin Salt-menetelmän asentamisesta Linux-koneelle.
 Lyhyesti:
 - Salt-projekti repositorion asennus:
 - metadatan päivitys

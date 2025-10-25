@@ -1,7 +1,7 @@
 # x) Lue ja tiivistä
 ## Run Salt Command Locally
 - Salt-komentojen suorittaminen lokaalisti on käytännöllistä harjoituksen ja testaamisen kannalta
-- Tärkeimmät tilafunktiot: pkg, file, service, user ja cmd
+- Tärkeimmät tilafunktiot: **pkg**, **file**, **service**, **user** ja **cmd**
 - Salt-menetelmää käytetään alikoneiden hallitsemiseen verkossa.
   
 (Karvinen 28.10.2021)

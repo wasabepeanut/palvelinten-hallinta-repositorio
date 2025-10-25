@@ -10,7 +10,7 @@
 
 
 ## Salt Quickstart
-- Salt-menetelmä voidaan pikaisesti aloittaa seuraavin vaihein:
+- Salt-menetelmä voidaan aloittaa pikaisesti seuraavin vaihein:
   - Asennetaan "Master" ja "Slave":
 
     **Master**

@@ -73,7 +73,9 @@ Kaikki muut vaiheet ovat tehty ohjeiden mukaisella tavalla.
 
 
 # b) asenna Salt 🧂
-Tässä tehtävässä käytän apuna [Salt Projectin ohjeita](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html) Saltin asentamiseen.
+Tässä tehtävässä käytän apuna [Salt Projectin ohjeita](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html) ja [Teron ohjeita](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/) Saltin asentamiseen.
+
+Seurasin ensin Teron Quickstart ohjeita, mutta homma jumittui heti ensimmäiseen komentoon. Virhetulostus selitti, että ei löydä paketteja, joten päätin seurata Salt Projectin ohjeita.
 
 Suoritin ensin seuraavat komennot, jolla asensin Salt Project repositorion:
 ```
@@ -85,7 +87,7 @@ Päivitin metadatan:
 
 ``sudo apt update``
 
-Nyt kun minulla oli repositorio, päätin seurata Teron [Quickstart-ohjetta](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/).
+Nyt kun minulla oli repositorio, päätin seurata taas Teron ohjetta.
 
 Asensin ensin isäntäkoneen (**Master**):
 ```

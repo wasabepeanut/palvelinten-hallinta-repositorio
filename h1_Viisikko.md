@@ -228,7 +228,13 @@ Testataan vielä pkg funktiolla:
 
 ``sudo salt-call --local -l info state.single pkg.installed tree``
 
+Testi1:
 
+<img width="662" height="442" alt="image" src="https://github.com/user-attachments/assets/20cc34eb-e516-4b4c-a960-99d38957c76c" />
+
+Testi2:
+
+<img width="591" height="325" alt="image" src="https://github.com/user-attachments/assets/05cd07e2-c9a3-4f5a-865a-57b14eea7dfd" />
 
 
 # References

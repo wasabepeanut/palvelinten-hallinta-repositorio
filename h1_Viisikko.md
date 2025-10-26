@@ -6,7 +6,6 @@
   
 (Karvinen 28.10.2021)
 
-**(huomio)**
 
 
 ## Salt Quickstart
@@ -33,8 +32,7 @@
     master$ sudo salt '*' cmd.run 'whoami'
     ```
 (Karvinen 28.3.2018)
-    
-**(huomio)**
+
 
 
 ## Raportin kirjoittaminen
@@ -45,8 +43,7 @@
   - **Helppolukuinen** = Tekstien jäsentely ja selkeää kieltä
   - **Viittaa lähteisiin**
   - **Raportointivirheet** = Plagiointi ja väärän tiedon raportointi.
-    
-**(huomio)**
+
 
 (Karvinen 4.6.2006)
 
@@ -76,6 +73,44 @@ Kaikki muut vaiheet ovat tehty ohjeiden mukaisella tavalla.
 
 
 # b) asenna Salt 🧂
+Tässä tehtävässä käytän apuna [Salt Projectin ohjeita](https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html) Saltin asentamiseen.
+
+Suoritin ensin seuraavat komennot, jolla asensin Salt Project repositorion:
+```
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+```
+Päivitin metadatan:
+``sudo apt update``
+
+Nyt kun minulla oli repositorio, päätin seurata Teron [Quickstart-ohjeeseen](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/).
+
+Asensin ensin isäntäkoneen (**Master**):
+```
+sudo apt-get update
+sudo apt-get -y install salt-master
+hostname -I
+```
+Ohjeistuksessa mainitaan, että palomuuren ollessa käytössä, pitää sallia portit 4505/tcp ja 4506/tcp. Käytin tässä apuna tekoälyä (ChatGPT):
+```
+sudo ufw allow 4505/tcp
+sudo ufw allow 4506/tcp
+sudo ufw reload 
+```
+
+Tämän jälkeen asensin alikoneen (**Minion**):
+```
+slave$ sudo apt-get update
+slave$ sudo apt-get -y install salt-minion
+```
+
+Annoin alikoneelle isäntäkoneen ip-osoitteen ja id:n:
+``sudo nano /etc/salt/minion``
+
+Käynnistin alikoneen uudelleen:
+``sudo systemctl restart salt-minion.service``
+
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

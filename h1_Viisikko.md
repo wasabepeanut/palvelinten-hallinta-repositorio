@@ -153,9 +153,11 @@ Näyttää toimivan!
 
 
 # c) Viisi tärkeintä
-Tässä tehtävässä analysoin Saltin viisi tärkeintä tilafunktiota testaamalla niiden käyttöä komentokehotteella sekä tekoälyllä.
+Tässä tehtävässä analysoin Saltin viisi tärkeintä tilafunktiota testaamalla niiden käyttöä komentokehotteella sekä käyttämällä hyödyksi [Teron ohjeita](https://terokarvinen.com/2021/salt-run-command-locally/) ja tekoälyä.
 
 ## cmd
+Tilafunktio on melko itseselitteinen. Sillä pystyy suorittamaan komentoja komentokehotteessa.
+
 ``sudo salt '*' cmd.run 'echo "Hello master"'``
 
   <img width="668" height="55" alt="image" src="https://github.com/user-attachments/assets/56372003-c421-4535-ba29-b400f9769ae1" />
@@ -164,18 +166,26 @@ Kuvassa näkyy, että alikone "duy" tulostaa tekstin "Hello master".
 Tässä tapauksessa, isäntäkone antaa käskyn alikoneille suorittamaan komennon 'echo "Hello master"'.
 Jos alikoneita olisi useampi, tämä komento pistäisi kaikki alikoneet suorittamaan saman komennon.
 
+
 ## pkg
+Tilafunktiolla pystyy hallitsemaan asennettuja ohjelmia.
+
 ``sudo salt-call --local -l info state.single pkg.installed tree`` 
 
 <img width="790" height="303" alt="image" src="https://github.com/user-attachments/assets/77f6a682-ea8b-43bd-ac6c-f9ef0a9d3ab5" />
 
 Kuvassa tilafunktio **pkg.installed** aloittaa joidenkin tiedostojen/pakettien asennuksen. 
-Tässä tapauksessa, paikallinen alikone asentaa paketin "tree".
-
-
+Tässä tapauksessa, paikallinen alikone asentaa paketin "tree", kuten kuvan tulostuksessa näkyy.
 
 
 ## file
+Tilafunktiolla pystyy hallitsemaan nimensä mukaisesti tiedostoja.
+
+``sudo salt-call --local -l info state.single file.absent /tmp/hellotero``
+
+Kuvassa tilafunktio **file.absent** tarkistaa minulle onko kyseinen tiedosto "/tmp/hellotero" puutteellinen. Tulos on kyllä koska minulla ei ole kyseistä tiedostoa tuossa polussa.
+
+
 ## service
 ## user
  

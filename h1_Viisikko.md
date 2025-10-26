@@ -212,6 +212,13 @@ Idempotenssi lyhyesti kuvattuna on ominaisuus, jossa tiettyä toimenpidettä voi
 
 Testataan nyt muutamia komentoja: 
 
+kuva1
+<img width="508" height="322" alt="image" src="https://github.com/user-attachments/assets/7570fa3e-e0b3-40c6-a37f-59c5a45f6cb9" />
+
+kuva2
+<img width="503" height="320" alt="image" src="https://github.com/user-attachments/assets/17017f58-7d5e-491d-9d95-d81868da0038" />
+
+
 ``sudo salt-call --local -l info state.single user.present duyp``
 
 

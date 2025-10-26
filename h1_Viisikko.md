@@ -185,14 +185,22 @@ Tilafunktiolla pystyy hallitsemaan nimensä mukaisesti tiedostoja.
 
 <img width="482" height="326" alt="image" src="https://github.com/user-attachments/assets/c221095c-ff33-4288-9326-5f28c6b40b0d" />
 
-
 Kuvassa tilafunktio **file.absent** tarkistaa minulle onko kyseinen tiedosto "/tmp/hellotero" puutteellinen. Tulos on kyllä koska minulla ei ole kyseistä tiedostoa tuossa polussa.
 
 
 ## service
-## user
- 
+Tällä tilafunktiolla pystyy tarkistamaan palveluiden tilaa.
 
+``sudo salt-call --local -l info state.single service.running apache2 enable=True``
+
+Funktio **service.running** tarkistaa onko "apache2" käynnissä tällä hetkellä, sekä käynnistää sen Saltin kautta jos ei. Tässä tapauksessa niin ei kuitenkaan käy, koska kyseistä palvelua ei löydy minulta. 
+
+## user
+Tällä tilafunktiolla pystytään hallita käyttäjiä.
+
+``sudo salt-call --local -l info state.single user.present duyp``
+
+Tässä funktiossa **user.present** tarkistaa onko käyttäjää "duyp" olemassa. Tulos on kyllä, koska se on minun oma käyttäjäni. 
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

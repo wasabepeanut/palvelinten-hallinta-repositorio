@@ -82,6 +82,7 @@ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltPr
 curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
 ```
 Päivitin metadatan:
+
 ``sudo apt update``
 
 Nyt kun minulla oli repositorio, päätin seurata Teron [Quickstart-ohjetta](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/).
@@ -106,12 +107,15 @@ sudo apt-get -y install salt-minion
 ```
 
 Annoin alikoneelle isäntäkoneen ip-osoitteen ja id:n:
+
 ``sudo nano /etc/salt/minion``
 
 Käynnistin alikoneen uudelleen:
+
 ``sudo systemctl restart salt-minion.service``
 
 Hyväksyin alikoneen avaimen (**Slave Key**):
+
 ``sudo salt-key -A``
 
 Jostain syystä avainta ei löytynyt, joten kysyin tekoälyltä apua.
@@ -119,7 +123,8 @@ Jostain syystä avainta ei löytynyt, joten kysyin tekoälyltä apua.
 <img width="521" height="36" alt="image" src="https://github.com/user-attachments/assets/71f04162-0477-4e36-9182-048984cc53db" />
 
 Tekoäly käski tarkistaa alikoneen statuksen:
-``sudo systemctl status salt-minion``
+
+`sudo systemctl status salt-minion`
 
 <img width="801" height="218" alt="image" src="https://github.com/user-attachments/assets/61fb682b-d86a-4040-a22f-e2f1708af0e2" />
 
@@ -133,11 +138,13 @@ sudo systemctl status salt-minion
 <img width="770" height="81" alt="image" src="https://github.com/user-attachments/assets/99a8d7df-ff55-4eb7-9a00-e83f6cbb86ea" />
 
 Nyt koneet on yhdistetty, kokeillaan uudestaan avaimen hyväksymistä:
+
 ``sudo salt-key -A``
 
 <img width="447" height="127" alt="image" src="https://github.com/user-attachments/assets/9636bdad-59f5-404b-b9ee-e5f83eaad522" />
 
 Tarkistetaan vielä saadaanko alikoneelta vastaus:
+
 ``sudo salt '*' cmd.run 'whoami'``
 
 <img width="546" height="52" alt="image" src="https://github.com/user-attachments/assets/34f0bb96-0a07-4489-804e-117c22baa9d4" />

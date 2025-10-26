@@ -167,10 +167,12 @@ Jos alikoneita olisi useampi, tämä komento pistäisi kaikki alikoneet suoritta
 ## pkg
 ``sudo salt-call --local -l info state.single pkg.installed tree`` 
 
-(kuva)
+<img width="790" height="303" alt="image" src="https://github.com/user-attachments/assets/77f6a682-ea8b-43bd-ac6c-f9ef0a9d3ab5" />
 
 Kuvassa tilafunktio **pkg.installed** aloittaa joidenkin tiedostojen/pakettien asennuksen. 
 Tässä tapauksessa, paikallinen alikone asentaa paketin "tree".
+
+
 
 
 ## file

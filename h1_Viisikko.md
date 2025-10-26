@@ -111,6 +111,10 @@ Annoin alikoneelle isäntäkoneen ip-osoitteen ja id:n:
 Käynnistin alikoneen uudelleen:
 ``sudo systemctl restart salt-minion.service``
 
+Hyväksyin alikoneen avaimen (**Slave Key**):
+``sudo salt-key -A``
+
+Jostain syystä tämä ei onnistunut, koska
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

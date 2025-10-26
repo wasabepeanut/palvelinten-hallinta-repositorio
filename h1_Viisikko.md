@@ -67,14 +67,14 @@ Lyhyesti:
 - Laite: Windows-11 käyttöjärjestelmällä varustettu kannettava tietokone
 - Virtualisointiohjelma: Oracle VirtualBox
 - Iso-tiedosto: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.1.0-amd64-xfce.iso
-
-## Virtuaalikoneen luonti
-Loin virtuaalikoneen seuraamalla Teron [ohjeita](https://terokarvinen.com/2021/install-debian-on-virtualbox/), mutta laitoin versio tyypiksi Debian 12 Bookworm (64-bit).
+- 
+## Asennus
+Käytin tässä tehtävässä Teron antamia [ohjeita](https://terokarvinen.com/2021/install-debian-on-virtualbox/), mutta vaihdoin versiotyypiksi Debian 12 Bookworm (64-bit). 
 
 <img width="943" height="715" alt="image" src="https://github.com/user-attachments/assets/ce4549c9-83c1-499d-a34f-03e5ca091c60" />
 
 
-## 
+# b) asenna Salt 🧂
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

@@ -71,6 +71,9 @@ Lyhyesti:
 ## Virtuaalikoneen luonti
 Loin virtuaalikoneen seuraamalla Teron [ohjeita](https://terokarvinen.com/2021/install-debian-on-virtualbox/), mutta laitoin versio tyypiksi Debian 12 Bookworm (64-bit).
 
+<img width="943" height="715" alt="image" src="https://github.com/user-attachments/assets/ce4549c9-83c1-499d-a34f-03e5ca091c60" />
+
+
 ## 
 
 # References

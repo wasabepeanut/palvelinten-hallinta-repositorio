@@ -153,6 +153,14 @@ Näyttää toimivan!
 
 
 # c) Viisi tärkeintä
+Tässä tehtävässä analysoin Saltin viisi tärkeintä tilafunktiota.
+
+- cmd: Aikaisemmassa tehtävässä suoritin ensimmäisen tilafunktio komentoni:
+
+  ``sudo salt '*' cmd.run 'whoami'``
+  <img width="668" height="55" alt="image" src="https://github.com/user-attachments/assets/56372003-c421-4535-ba29-b400f9769ae1" />
+
+-  
 
 
 # References

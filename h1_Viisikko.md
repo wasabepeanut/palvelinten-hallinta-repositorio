@@ -64,9 +64,14 @@ Lyhyesti:
 
 # a) Debian 12-Bookworm asennus
 ## Esivalmistelut
-Laite: Windows-11 käyttöjärjestelmällä varustettu kannettava tietokone
-Virtualisointiohjelma: Oracle VirtualBox
+- Laite: Windows-11 käyttöjärjestelmällä varustettu kannettava tietokone
+- Virtualisointiohjelma: Oracle VirtualBox
+- Iso-tiedosto: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.1.0-amd64-xfce.iso
 
+## Virtuaalikoneen luonti
+Loin virtuaalikoneen seuraamalla Teron [ohjeita](https://terokarvinen.com/2021/install-debian-on-virtualbox/), mutta laitoin versio tyypiksi Debian 12 Bookworm (64-bit).
+
+## 
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

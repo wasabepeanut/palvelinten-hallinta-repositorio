@@ -62,6 +62,12 @@ Lyhyesti:
 (VMware 2025)
 
 
+# a) Debian 12-Bookworm asennus
+## Esivalmistelut
+Laite: Windows-11 käyttöjärjestelmällä varustettu kannettava tietokone
+Virtualisointiohjelma: Oracle VirtualBox
+
+
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.
 

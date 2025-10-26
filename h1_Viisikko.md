@@ -153,14 +153,30 @@ Näyttää toimivan!
 
 
 # c) Viisi tärkeintä
-Tässä tehtävässä analysoin Saltin viisi tärkeintä tilafunktiota.
+Tässä tehtävässä analysoin Saltin viisi tärkeintä tilafunktiota testaamalla niiden käyttöä komentokehotteella sekä tekoälyllä.
 
-- cmd: Aikaisemmassa tehtävässä suoritin ensimmäisen tilafunktio komentoni:
+## cmd
+``sudo salt '*' cmd.run 'echo "Hello master"'``
 
-  ``sudo salt '*' cmd.run 'whoami'``
   <img width="668" height="55" alt="image" src="https://github.com/user-attachments/assets/56372003-c421-4535-ba29-b400f9769ae1" />
 
--  
+Kuvassa näkyy, että alikone "duy" tulostaa tekstin "Hello master". 
+Tässä tapauksessa, isäntäkone antaa käskyn alikoneille suorittamaan komennon 'echo "Hello master"'.
+Jos alikoneita olisi useampi, tämä komento pistäisi kaikki alikoneet suorittamaan saman komennon.
+
+## pkg
+``sudo salt-call --local -l info state.single pkg.installed tree`` 
+
+(kuva)
+
+Kuvassa tilafunktio **pkg.installed** aloittaa joidenkin tiedostojen/pakettien asennuksen. 
+Tässä tapauksessa, paikallinen alikone asentaa paketin "tree".
+
+
+## file
+## service
+## user
+ 
 
 
 # References

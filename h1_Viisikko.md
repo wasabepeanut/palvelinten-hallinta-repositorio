@@ -121,6 +121,13 @@ Jostain syystä avainta ei löytynyt, joten kysyin tekoälyltä apua.
 Tekoäly käski tarkistaa alikoneen statuksen:
 ``sudo systemctl status salt-minion``
 
+<img width="801" height="218" alt="image" src="https://github.com/user-attachments/assets/61fb682b-d86a-4040-a22f-e2f1708af0e2" />
+
+
+asd
+<img width="770" height="81" alt="image" src="https://github.com/user-attachments/assets/99a8d7df-ff55-4eb7-9a00-e83f6cbb86ea" />
+
+
 
 
 # References

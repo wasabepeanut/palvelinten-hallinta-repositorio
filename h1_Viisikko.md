@@ -247,7 +247,7 @@ Kokeiltuani kaksi kertaa saman komennon suorittamista sain hieman eri tulostukse
 Tässä näkyy miten idempotenssi ilmenee, kun sama toimenpide toistetaan. Kone ymmärtää, että asennus on tehty ja ei lähde tekemään turhaa työtä.
 
 
-# References
+# Lähteet
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.
 
 Karvinen, T. 28.3.2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Tero Karvinen. URL: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/. Accessed: 25.10.2025.

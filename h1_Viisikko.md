@@ -135,6 +135,8 @@ sudo systemctl status salt-minion
 Nyt koneet on yhdistetty, kokeillaan uudestaan avaimen hyväksymistä:
 ``sudo salt-key -A``
 
+<img width="447" height="127" alt="image" src="https://github.com/user-attachments/assets/9636bdad-59f5-404b-b9ee-e5f83eaad522" />
+
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

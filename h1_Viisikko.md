@@ -140,6 +140,8 @@ Nyt koneet on yhdistetty, kokeillaan uudestaan avaimen hyväksymistä:
 Tarkistetaan vielä saadaanko alikoneelta vastaus:
 ``sudo salt '*' cmd.run 'whoami'``
 
+<img width="546" height="52" alt="image" src="https://github.com/user-attachments/assets/34f0bb96-0a07-4489-804e-117c22baa9d4" />
+
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

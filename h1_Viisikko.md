@@ -183,6 +183,9 @@ Tilafunktiolla pystyy hallitsemaan nimensä mukaisesti tiedostoja.
 
 ``sudo salt-call --local -l info state.single file.absent /tmp/hellotero``
 
+<img width="482" height="326" alt="image" src="https://github.com/user-attachments/assets/c221095c-ff33-4288-9326-5f28c6b40b0d" />
+
+
 Kuvassa tilafunktio **file.absent** tarkistaa minulle onko kyseinen tiedosto "/tmp/hellotero" puutteellinen. Tulos on kyllä koska minulla ei ole kyseistä tiedostoa tuossa polussa.
 
 

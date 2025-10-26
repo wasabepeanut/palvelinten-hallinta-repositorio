@@ -206,12 +206,24 @@ Tällä tilafunktiolla pystytään hallita käyttäjiä.
 
 Tässä funktiossa **user.present** tarkistaa onko käyttäjää "duyp" olemassa. Tulos on kyllä, koska se on minun oma käyttäjäni. 
 
+# d) Idempotentti
+En aluksi tiennyt mitä idempotenssi tarkoittaa, joten otin ihan aluksi selvää siitä.
+Idempotenssi lyhyesti kuvattuna on ominaisuus, jossa tiettyä toimenpidettä voidaan toistaa moneen kertaan, eikä lopputulos muutu (LoadFocus 2025). 
+
+Testataan nyt muutamia komentoja: 
+
+``sudo salt-call --local -l info state.single user.present duyp``
+
+
+
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.
 
 Karvinen, T. 28.3.2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Tero Karvinen. URL: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/. Accessed: 25.10.2025.
 
 Karvinen, T. 28.10.2021. Run Salt Command Locally. Tero Karvinen. URL: https://terokarvinen.com/2021/salt-run-command-locally/. Accessed: 25.10.2025.
+
+LoadFocus. 2025. Mikä on Idempotenssi?. LoadFocus. URL: https://loadfocus.com/fi-fi/glossary/what-is-idempotency. Accessed. 27.10.2025.
 
 VMware. 2025. Salt Install Guide: Linux (DEB). Saltproject.io. URL: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html. Accessed: 25.10.2025.
 

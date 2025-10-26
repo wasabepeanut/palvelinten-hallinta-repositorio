@@ -84,7 +84,7 @@ curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/downl
 Päivitin metadatan:
 ``sudo apt update``
 
-Nyt kun minulla oli repositorio, päätin seurata Teron [Quickstart-ohjeeseen](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/).
+Nyt kun minulla oli repositorio, päätin seurata Teron [Quickstart-ohjetta](https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/).
 
 Asensin ensin isäntäkoneen (**Master**):
 ```

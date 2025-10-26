@@ -101,8 +101,8 @@ sudo ufw reload
 
 Tämän jälkeen asensin alikoneen (**Minion**):
 ```
-slave$ sudo apt-get update
-slave$ sudo apt-get -y install salt-minion
+sudo apt-get update
+sudo apt-get -y install salt-minion
 ```
 
 Annoin alikoneelle isäntäkoneen ip-osoitteen ja id:n:
@@ -123,11 +123,17 @@ Tekoäly käski tarkistaa alikoneen statuksen:
 
 <img width="801" height="218" alt="image" src="https://github.com/user-attachments/assets/61fb682b-d86a-4040-a22f-e2f1708af0e2" />
 
+Kuten kuvasta huomaa, alikone ei ole vielä yhdistynyt isäntäkoneeseen.
+Käynnistin alikoneen uudestaan ja tarkistin vielä kerran statuksen:
+```
+sudo systemctl start salt-minion
+sudo systemctl status salt-minion
+```
 
-asd
 <img width="770" height="81" alt="image" src="https://github.com/user-attachments/assets/99a8d7df-ff55-4eb7-9a00-e83f6cbb86ea" />
 
-
+Nyt koneet on yhdistetty, kokeillaan uudestaan avaimen hyväksymistä:
+``sudo salt-key -A``
 
 
 # References

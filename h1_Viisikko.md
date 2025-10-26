@@ -240,6 +240,12 @@ Testi3:
 
 <img width="587" height="322" alt="image" src="https://github.com/user-attachments/assets/074a3f05-efd9-4373-80b0-0f3455ed135d" />
 
+Nyt vertailessa kuvia huomaamme hieman eroja. Ensimmäisessä kuvassa kone havaitsee, että pakettia "tree" ei ole vielä asennettu, joten se aloittaa sen asentamisen. Tämän jälkeen tulostuksessa näkyy, että asennus onnistui ja suluissa, että on tullut yksi uusi muutos lokaaliin.
+
+Kokeiltuani kaksi kertaa saman komennon suorittamista sain hieman eri tulostuksen. Kuvan kommenttikentässä sanotaan, että kyseiset paketit ovat jo asennettu ja lokaaliin ei ole tullut uusia muutoksia. Sama tulostus näkyy kolmannessa testissä.
+
+Tässä näkyy miten idempotenssi ilmenee, kun sama toimenpide toistetaan. Kone ymmärtää, että asennus on tehty ja ei lähde tekemään turhaa työtä.
+
 
 # References
 Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvinen. URL: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Accessed: 25.10.2025.

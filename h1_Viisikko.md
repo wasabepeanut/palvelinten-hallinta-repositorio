@@ -193,12 +193,16 @@ Tällä tilafunktiolla pystyy tarkistamaan palveluiden tilaa.
 
 ``sudo salt-call --local -l info state.single service.running apache2 enable=True``
 
+<img width="690" height="430" alt="image" src="https://github.com/user-attachments/assets/d4f3a744-1687-4c18-97ad-0b755aa53b4f" />
+
 Funktio **service.running** tarkistaa onko "apache2" käynnissä tällä hetkellä, sekä käynnistää sen Saltin kautta jos ei. Tässä tapauksessa niin ei kuitenkaan käy, koska kyseistä palvelua ei löydy minulta. 
 
 ## user
 Tällä tilafunktiolla pystytään hallita käyttäjiä.
 
 ``sudo salt-call --local -l info state.single user.present duyp``
+
+<img width="527" height="342" alt="image" src="https://github.com/user-attachments/assets/5883f5f9-b504-43eb-ae1e-a6b53cca9621" />
 
 Tässä funktiossa **user.present** tarkistaa onko käyttäjää "duyp" olemassa. Tulos on kyllä, koska se on minun oma käyttäjäni. 
 

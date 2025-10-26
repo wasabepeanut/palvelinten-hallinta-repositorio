@@ -14,22 +14,22 @@
 
     **Master**
     ```
-    master$ sudo apt-get update
-    master$ sudo apt-get -y install salt-master
-    master$ hostname -I
+    sudo apt-get update
+    sudo apt-get -y install salt-master
+    hostname -I
     ```
     **Slave**
     ```
-    slave$ sudo apt-get update
-    slave$ sudo apt-get -y install salt-minion
+    sudo apt-get update
+    sudo apt-get -y install salt-minion
     ```
   - Hyväksytään "Slave Key"
     ```
-    master$ sudo salt-key -A
+    sudo salt-key -A
     ```
   - Testataan että luotu alikone näkyy.
     ```
-    master$ sudo salt '*' cmd.run 'whoami'
+    sudo salt '*' cmd.run 'whoami'
     ```
 (Karvinen 28.3.2018)
 
@@ -214,11 +214,11 @@ Testataan nyt muutamia komentoja:
 
 ``sudo salt-call --local -l info state.single user.present duyp``
 
-Kuva1:
+Testi1:
 
 <img width="508" height="322" alt="image" src="https://github.com/user-attachments/assets/7570fa3e-e0b3-40c6-a37f-59c5a45f6cb9" />
 
-Kuva2:
+Testi2:
 
 <img width="503" height="320" alt="image" src="https://github.com/user-attachments/assets/17017f58-7d5e-491d-9d95-d81868da0038" />
 
@@ -235,6 +235,7 @@ Testi1:
 Testi2:
 
 <img width="591" height="325" alt="image" src="https://github.com/user-attachments/assets/05cd07e2-c9a3-4f5a-865a-57b14eea7dfd" />
+
 
 
 # References

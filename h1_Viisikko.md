@@ -114,8 +114,13 @@ Käynnistin alikoneen uudelleen:
 Hyväksyin alikoneen avaimen (**Slave Key**):
 ``sudo salt-key -A``
 
-Jostain syystä tämä ei onnistunut, koska
+Jostain syystä avainta ei löytynyt, joten kysyin tekoälyltä apua.
+
 <img width="521" height="36" alt="image" src="https://github.com/user-attachments/assets/71f04162-0477-4e36-9182-048984cc53db" />
+
+Tekoäly käski tarkistaa alikoneen statuksen:
+``sudo systemctl status salt-minion``
+
 
 
 # References

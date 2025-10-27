@@ -64,7 +64,7 @@ Lyhyesti:
 - Laite: Windows-11 käyttöjärjestelmällä varustettu kannettava tietokone
 - Virtualisointiohjelma: Oracle VirtualBox
 - Iso-tiedosto: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.1.0-amd64-xfce.iso
-- 
+
 ## Asennus
 Käytin tässä tehtävässä Teron antamia [ohjeita](https://terokarvinen.com/2021/install-debian-on-virtualbox/), mutta vaihdoin versiotyypiksi Debian 12 Bookworm (64-bit). 
 Kaikki muut vaiheet ovat tehty ohjeiden mukaisella tavalla.

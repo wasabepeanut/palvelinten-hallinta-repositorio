@@ -137,7 +137,9 @@ Nyt suoritetaan top file
 
 <img width="661" height="277" alt="image" src="https://github.com/user-attachments/assets/c3c25f90-5226-400c-9f95-87562d6f55ac" />
 
+
 <img width="362" height="532" alt="image" src="https://github.com/user-attachments/assets/c08acedb-f5f2-4154-b6aa-3ad6da36d985" />
+
 
 <img width="257" height="138" alt="image" src="https://github.com/user-attachments/assets/45a992a9-4e7e-4112-934a-d13d065b177b" />
 

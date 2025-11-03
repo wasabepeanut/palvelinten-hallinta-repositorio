@@ -38,13 +38,27 @@ Lyhyesti:
 # a) Hei infrakoodi!
 Tässä tehtävässä käytin apunani [Teron ohjeita](https://terokarvinen.com/2024/hello-salt-infra-as-code/).
 
-Asensin ensin 
+Asensin ensin Saltin
 ```
 sudo apt-get update
 sudo apt-get -y install salt-minion
 sudo apt-get -y install micro
 export EDITOR=micro
 ```
+
+Loin "hello" moduulille kansion sekä loin ja lisäsin skriptin
+```
+sudo mkdir -p /srv/salt/hello/
+cd /srv/salt/hello/
+sudoedit init.sls
+```
+
+<img width="451" height="378" alt="image" src="https://github.com/user-attachments/assets/ae05d87a-56ea-488e-a334-2b000632dd62" />
+
+Tarkistetaan vielä että tiedosto löytyy
+
+<img width="388" height="42" alt="image" src="https://github.com/user-attachments/assets/07611a5f-cfe8-4a6d-834b-47e594fd218a" />
+
 
 # Lähteet
 Karvinen, T. 3.4.2024. Hello Salt Infra-as-Code. Tero Karvinen. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/. Luettu: 3.11.2025.

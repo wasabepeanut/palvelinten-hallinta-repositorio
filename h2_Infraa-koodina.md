@@ -1,7 +1,7 @@
 # Esivalmistelut
-Käyttöjärjestelmä: Windows 11
-Virtualisointiohjelma: VirtualBox
-Virtuaalikoneen käyttöjärjestelmä: Debian 13 Trixie
+- Käyttöjärjestelmä: Windows 11
+- Virtualisointiohjelma: VirtualBox
+- Virtuaalikoneen käyttöjärjestelmä: Debian 13 Trixie
 
 # x) Lue ja tiivistä
 ## Hello Salt Infra-as-Code

@@ -1,3 +1,8 @@
+# Esivalmistelut
+Käyttöjärjestelmä: Windows 11
+Virtualisointiohjelma: VirtualBox
+Virtuaalikoneen käyttöjärjestelmä: Debian 13 Trixie
+
 # x) Lue ja tiivistä
 ## Hello Salt Infra-as-Code
 Artikkelissa opetetaan tekemään "Hello World" tyyppinen ohjelma Saltilla.
@@ -31,7 +36,15 @@ Lyhyesti:
 
 
 # a) Hei infrakoodi!
+Tässä tehtävässä käytin apunani [Teron ohjeita](https://terokarvinen.com/2024/hello-salt-infra-as-code/).
 
+Asensin ensin 
+```
+sudo apt-get update
+sudo apt-get -y install salt-minion
+sudo apt-get -y install micro
+export EDITOR=micro
+```
 
 # Lähteet
 Karvinen, T. 3.4.2024. Hello Salt Infra-as-Code. Tero Karvinen. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/. Luettu: 3.11.2025.

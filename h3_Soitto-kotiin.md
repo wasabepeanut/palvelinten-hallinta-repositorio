@@ -46,7 +46,9 @@ Luodaan uusi hakemisto ja alustetaan se:
 
 <img width="597" height="125" alt="image" src="https://github.com/user-attachments/assets/f1b05887-f2dc-45a4-b7a7-fa31c7e8abf6" />
 
-Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin (löytyy Teron ohjeista) ja laitan vagrantin päälle: `vagrant up`
+Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin (löytyy Teron ohjeista) ja laitan vagrantin päälle: 
+
+```vagrant up```
 
 
 

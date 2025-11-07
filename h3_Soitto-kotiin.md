@@ -30,8 +30,7 @@ Tässä tehtävässä käytän apunani seuraavaa Vagrantin asennus [ohjetta](htt
 
 Asensin Vagrantin Windows asentajalla.
 
-Tarkistetaan, että asennus onnistui:
-`vagrant --version`
+Tarkistetaan, että asennus onnistui: `vagrant --version`
 
 <img width="302" height="52" alt="image" src="https://github.com/user-attachments/assets/8b23ca25-a001-44e0-9f98-bd1d85fae124" />
 
@@ -40,15 +39,19 @@ Tarkistetaan, että asennus onnistui:
 Jatkoin tehtävää sekä Teron [ohjeen](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/) että edellämainitun ohjeen mukaisesti.
 
 Luodaan uusi hakemisto ja alustetaan se:
-`mkdir twohost`,
-`cd twohost`,
-`vagrant init`
+```
+mkdir twohost
+cd twohost
+vagrant init
+```
 
 <img width="597" height="125" alt="image" src="https://github.com/user-attachments/assets/f1b05887-f2dc-45a4-b7a7-fa31c7e8abf6" />
 
 Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin (löytyy Teron ohjeista) ja laitan vagrantin päälle: 
 
-```vagrant up```
+```
+vagrant up
+```
 
 
 

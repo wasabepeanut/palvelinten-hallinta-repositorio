@@ -88,7 +88,7 @@ t002 -> t001:
 Näyttäisi toimivan.
 
 
-d) Herra-orja verkossa
+# d) Herra-orja verkossa
 Tässä tehtävässä demonstroin herra-orja arkkitehtuurin toimintaa näiden kahden koneen välillä.
 
 Asennetaan ensin Salt Teron [ohjeiden](https://terokarvinen.com/install-salt-on-debian-13-trixie/) mukaisesti.

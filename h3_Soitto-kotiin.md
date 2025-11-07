@@ -50,6 +50,10 @@ vagrant init
 
 Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin Teron ohjeista (**muutin myös skriptissä ympäristön nykyiseen: bullseye64 -> bookworm64**) 
 
+```
+notepad Vagrantfile
+```
+
 <img width="395" height="109" alt="image" src="https://github.com/user-attachments/assets/23201c33-e91e-4331-9729-120c81e15e65" />
 
 Vagrant päälle:

@@ -93,11 +93,53 @@ Tässä tehtävässä demonstroin herra-orja arkkitehtuurin toimintaa näiden ka
 
 Asennetaan ensin Salt Teron [ohjeiden](https://terokarvinen.com/install-salt-on-debian-13-trixie/) mukaisesti.
 
+Asennetaan **wget**, jolla voidaan hakea Salt repositoriot, sekä luodaan Saltille hakemistot: 
+```
+sudo apt-get update
+sudo apt-get install wget
+mkdir saltrepo/
+cd saltrepo/
+wget https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
+wget https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources
+```
+
+Asennetaan myös GnuPG paketti, jolla voidaan tarkistaa itse avain:
+```
+sudo apt-get install gnupg -y
+```
+
+Tarkistetaan että tiedostoissa ei ole vikoja sekä avain:
+```
+less public
+less salt.sources
+gpg --show-key --with-fingerprint public 
+```
+
+<img width="746" height="133" alt="image" src="https://github.com/user-attachments/assets/d02619a1-e167-425e-b044-0f4c8fa33a6e" />
+
+Kaikki näyttäisi olevan kunnossa. Luotetaan ja asennetaan repot:
+```
+sudo cp public /etc/apt/keyrings/salt-archive-keyring.pgp
+sudo cp salt.sources /etc/apt/sources.list.d/
+```
+
+Nyt asennetaan Salt, tehdään koneesta "**t001**" isäntäkone:
+```
+sudo apt-get update
+sudo apt-get install salt-master
+salt --version
+```
+
+<img width="357" height="43" alt="image" src="https://github.com/user-attachments/assets/a329eace-47da-496e-8b6f-0be5fde83f59" />
+
+Toistetaan toimenpiteet toiselle koneelle (**t002**), mutta tehdään siitä alikone.
+
 
 # Lähteet
 IPv6rs. 2024. How to Install Vagrant on Windows 11. IPv6rs. Luettavissa: https://ipv6.rs/tutorial/Windows_11/Vagrant/. Luettu: 7.11.2025.
 
-
 Karvinen, T. 11.4.2021. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Tero Karvinen. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/. Luettu: 7.11.2025.
 
 Karvinen, T. 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Tero Karvinen. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file. Luettu: 7.11.2025.
+
+Karvinen, T. 20.10.2025. Install Salt on Debian 13 Trixie. Tero Karvinen. Luettavissa: https://terokarvinen.com/install-salt-on-debian-13-trixie/. Luettu: 7.11.2025.

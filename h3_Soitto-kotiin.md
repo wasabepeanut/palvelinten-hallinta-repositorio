@@ -182,6 +182,7 @@ sudo salt t002 user.info bonsai
 
 
 **pkg**
+
 Käytin tässä hieman apuna tekoälyä (ChatGPT).
 ```
 sudo salt t002 pkg.install cbonsai

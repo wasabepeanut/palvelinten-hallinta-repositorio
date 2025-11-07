@@ -26,7 +26,7 @@ Olimme tehneet tämän kaltaisia harjoituksia viime viikon tehtävissä sekä lu
 
 
 # a) Hello Vagrant!
-Tässä tehtävässä käytän apunani Teron Vagrantin asennus [ohjeita](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/).
+Tässä tehtävässä käytän apunani seuraavaa Vagrantin asennus [ohjetta](https://ipv6.rs/tutorial/Windows_11/Vagrant/).
 
 Asensin Vagrantin Windows asentajalla.
 
@@ -37,9 +37,25 @@ Tarkistetaan, että asennus onnistui:
 
 
 # b) Linux Vagrant
+Jatkoin tehtävää sekä Teron [ohjeen](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/) että edellämainitun ohjeen mukaisesti.
+
+Luodaan uusi hakemisto ja alustetaan se:
+`mkdir twohost`,
+`cd twohost`,
+`vagrant init`
+
+<img width="597" height="125" alt="image" src="https://github.com/user-attachments/assets/f1b05887-f2dc-45a4-b7a7-fa31c7e8abf6" />
+
+Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin (löytyy Teron ohjeista) ja laitan vagrantin päälle: `vagrant up`
+
+
 
 
 # Lähteet
+IPv6rs. 2024. How to Install Vagrant on Windows 11. IPv6rs. Luettavissa: https://ipv6.rs/tutorial/Windows_11/Vagrant/. Luettu: 7.11.2025.
+
+
+
 Karvinen, T. 11.4.2021. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Tero Karvinen. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/. Luettu: 7.11.2025.
 
 Karvinen, T. 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Tero Karvinen. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file. Luettu: 7.11.2025.

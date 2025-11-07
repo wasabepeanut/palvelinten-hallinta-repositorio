@@ -134,6 +134,10 @@ salt --version
 
 Toistetaan toimenpiteet toiselle koneelle (**t002**), mutta tehdään siitä alikone.
 
+Tarkistus: `salt-minion --version` 
+
+<img width="442" height="43" alt="image" src="https://github.com/user-attachments/assets/5b1ef231-5427-43ec-9bd2-a3327c201aad" />
+
 
 # Lähteet
 IPv6rs. 2024. How to Install Vagrant on Windows 11. IPv6rs. Luettavissa: https://ipv6.rs/tutorial/Windows_11/Vagrant/. Luettu: 7.11.2025.

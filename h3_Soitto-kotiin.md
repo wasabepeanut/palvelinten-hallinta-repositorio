@@ -196,7 +196,8 @@ Testataan toisella koneella (**t002**)
 ```
 <img width="441" height="443" alt="image" src="https://github.com/user-attachments/assets/b78d8bf5-befe-42dc-9267-d14381d45937" />
 
-Vau.
+Wow.
+
 
 
 # Lähteet

@@ -36,6 +36,7 @@ Tarkistetaan, että asennus onnistui: `vagrant --version`
 
 
 # b) Linux Vagrant
+Tässä tehtävässä luodaan yksi Linux-virtuaalikone Vagrantilla.
 Jatkoin tehtävää sekä Teron [ohjeen](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/) että edellämainitun ohjeen mukaisesti.
 
 Luodaan uusi hakemisto ja alustetaan se:
@@ -47,18 +48,54 @@ vagrant init
 
 <img width="597" height="125" alt="image" src="https://github.com/user-attachments/assets/f1b05887-f2dc-45a4-b7a7-fa31c7e8abf6" />
 
-Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin (löytyy Teron ohjeista) ja laitan vagrantin päälle: 
+Tämä loi minulle tiedoston "**Vagrantfile**", jonne lisään skriptin Teron ohjeista (**muutin myös skriptissä ympäristön nykyiseen: bullseye64 -> bookworm64**) 
 
+<img width="395" height="109" alt="image" src="https://github.com/user-attachments/assets/23201c33-e91e-4331-9729-120c81e15e65" />
+
+Vagrant päälle:
 ```
 vagrant up
 ```
 
+<img width="795" height="212" alt="image" src="https://github.com/user-attachments/assets/0e1b119d-4694-4fae-83a5-9b1ccd4d289d" />
 
+Asennusten jälkeen kirjauduin sisään **t001**:
+
+```
+vagrant ssh t001
+```
+
+<img width="597" height="72" alt="image" src="https://github.com/user-attachments/assets/a3c9c3d8-ebd6-45e8-9006-e674edb8a67a" />
+
+Toimii!
+
+
+# c) Kaksin kaunihimpi
+Tässä tehtävässä luodaan yhden sijaan kaksi virtuaalikonetta. (Periaatteessa loimme jo edellisessä tehtävässä kaksi)
+
+Kokeillaan nyt näiden kahden koneen välistä kommunikointia.
+
+t001 -> t002:
+`ping 192.168.88.102`
+
+<img width="561" height="86" alt="image" src="https://github.com/user-attachments/assets/88e6fc33-74a3-4f10-a0fb-72b3000ec985" />
+
+t002 -> t001:
+`ping 192.168.88.101`
+
+<img width="567" height="77" alt="image" src="https://github.com/user-attachments/assets/6b48730e-e44c-4f7c-b568-c76ecbe0a05d" />
+
+Näyttäisi toimivan.
+
+
+d) Herra-orja verkossa
+Tässä tehtävässä demonstroin herra-orja arkkitehtuurin toimintaa näiden kahden koneen välillä.
+
+Asennetaan ensin Salt Teron [ohjeiden](https://terokarvinen.com/install-salt-on-debian-13-trixie/) mukaisesti.
 
 
 # Lähteet
 IPv6rs. 2024. How to Install Vagrant on Windows 11. IPv6rs. Luettavissa: https://ipv6.rs/tutorial/Windows_11/Vagrant/. Luettu: 7.11.2025.
-
 
 
 Karvinen, T. 11.4.2021. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Tero Karvinen. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/. Luettu: 7.11.2025.

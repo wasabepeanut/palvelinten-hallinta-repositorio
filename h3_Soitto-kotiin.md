@@ -28,21 +28,15 @@ Olimme tehneet tämän kaltaisia harjoituksia viime viikon tehtävissä sekä lu
 # a) Hello Vagrant!
 Tässä tehtävässä käytän apunani Teron Vagrantin asennus [ohjeita](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/).
 
-Ensin asennetaan Vagrant:
-`sudo apt-get install vagrant`
-
-Luodaan uusi hakemisto ja lisätään sinne tiedosto skriptineen (skripti löytyy ohjeista):
-`mkdir twohost/; cd twohost/`
-`nano Vagrantfile`
-
-<img width="802" height="435" alt="image" src="https://github.com/user-attachments/assets/ba26fa4e-5b6f-4132-b577-60c00055dfb2" />
+Asensin Vagrantin Windows asentajalla.
 
 Tarkistetaan, että asennus onnistui:
 `vagrant --version`
 
-<img width="345" height="37" alt="image" src="https://github.com/user-attachments/assets/0ee90ba4-cda9-4aaf-9c8b-fb3808d3479e" />
+<img width="302" height="52" alt="image" src="https://github.com/user-attachments/assets/8b23ca25-a001-44e0-9f98-bd1d85fae124" />
 
 
+# b) Linux Vagrant
 
 
 # Lähteet

@@ -6,6 +6,16 @@
 
 # x) Lue ja tiivistä
 ## Two Machine Virtual Network
+Artikkelissa käydään nopeasti läpi miten asennetaan ja saadaan **Vagrant**-työkalu käyttöön
+Vagrantin hyötyjä:
+- Virtualbox koneiden automaattinen järjestely
+- Automatisoi SSH:n sisäänkirjautumisen
+- Ei vaadi graafista käyttöliittymää.
+
+(Karvinen 11.4.2021)
+
+
+##  
 
 
 # Lähteet

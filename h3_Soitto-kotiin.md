@@ -138,6 +138,64 @@ Tarkistus: `salt-minion --version`
 
 <img width="442" height="43" alt="image" src="https://github.com/user-attachments/assets/5b1ef231-5427-43ec-9bd2-a3327c201aad" />
 
+Tämän jälkeen lisäsin alikoneen tiedostoon isäntäkoneen ip-osoitteen komennolla `sudoedit /etc/salt/minion`
+
+<img width="207" height="35" alt="image" src="https://github.com/user-attachments/assets/04649c11-916f-43fd-acbf-d6be99f561fb" />
+
+Käynnistetään alikone uudestaan ja tarkistetaan että se on päällä:
+```
+sudo systemctl restart salt-minion
+sudo systemctl status salt-minion
+```
+
+<img width="363" height="67" alt="image" src="https://github.com/user-attachments/assets/862d5d01-d20a-46f8-89c1-ecabbff6b9b6" />
+
+Tämän jälkeen menin takaisin isäntäkoneeseen (**t001**) ja hyväksyin siellä alikoneen avaimen.
+```
+sudo salt-key -A
+```
+
+<img width="396" height="117" alt="image" src="https://github.com/user-attachments/assets/25b54873-9c15-4ad2-a06b-8f1a07cb7c29" />
+
+Lopuksi vielä testataan, pystytäänkö antamaan alikoneelle käskyjä:
+```
+salt '*' cmd.run 'whoami'
+```
+
+<img width="417" height="76" alt="image" src="https://github.com/user-attachments/assets/592dc04a-588e-475e-a5f9-620fcf3a817d" />
+
+Toimii!
+
+
+# e) Kahden tilan kokeilu verkon yli (viisikosta: pkg, file, service, user, cmd)
+Kokeilen tässä tehtävässä tilafunktioita pkg ja user.
+
+**user**
+
+```
+sudo salt t002 user.add bonsai
+sudo salt t002 user.info bonsai
+```
+
+<img width="432" height="272" alt="image" src="https://github.com/user-attachments/assets/c5cb3184-aa72-49ff-9b0a-b7970d889b3b" />
+
+
+
+**pkg**
+```
+sudo salt t002 pkg.install cbonsai
+```
+
+<img width="182" height="152" alt="image" src="https://github.com/user-attachments/assets/84fba16b-1ad7-425d-9a5e-8736c012fba1" />
+
+Testataan toisella koneella (**t002**)
+```
+/usr/games/cbonsai
+```
+<img width="441" height="443" alt="image" src="https://github.com/user-attachments/assets/b78d8bf5-befe-42dc-9267-d14381d45937" />
+
+Vau.
+
 
 # Lähteet
 IPv6rs. 2024. How to Install Vagrant on Windows 11. IPv6rs. Luettavissa: https://ipv6.rs/tutorial/Windows_11/Vagrant/. Luettu: 7.11.2025.

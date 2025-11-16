@@ -130,10 +130,22 @@ sudo apt install apache2 -y
 
 Käynnistetään ja tarkistetaan että se meni päälle:
 ```
+
 sudo systemctl enable apache2
 sudo systemctl status apache2
 ```
-**KUVA**
+
+<img width="475" height="97" alt="image" src="https://github.com/user-attachments/assets/0d53af67-2a2f-4a6d-a5f2-aad9b4e2ae20" />
+
+Näyttäisi olevan päällä.
+Tehdään nyt perus HTML-sivu testausta varten.
+
+```
+sudo mkdir /var/www/html/test_website
+echo '<html><head><title>Example</title></head><body><h1>GFG</h1><p>This is a test.</p></body></html>' | sudo tee /var/www/html/test_website/index.html
+```
+
+Lisätään vielä konfigurointitiedosto GeeksforGeeks sivustolta, jonka annoin ChatGPT:n muokattavaksi Debianille. Muutetaan myös testisivun oikeuksia, jotta Apache voi suorittaa sen.
 
 ```
 sudo tee /etc/apache2/sites-available/web.testingserver.com.conf > /dev/null << 'EOF'
@@ -145,12 +157,27 @@ sudo tee /etc/apache2/sites-available/web.testingserver.com.conf > /dev/null << 
     CustomLog ${APACHE_LOG_DIR}/web.testingserver.com_access.log combined
 </VirtualHost>
 EOF
-
-
 sudo chown -R www-data:www-data /var/www/html/test_website
-sudo chmod -R 755 /var/www/html/test_website
+sudo chmod -R 755 /var/www/html/test_websit
+```
+Koska minulla on palomuuri (**ufw**) käytössä, sallitaan vielä Apache:
 
 ```
+sudo ufw allow 'Apache'
+sudo ufw reload
+```
+
+Siirryin selaimen puolelle ja menin osoitteeseen 'http://localhost/test_website/'.
+
+<img width="788" height="297" alt="image" src="https://github.com/user-attachments/assets/6c89701a-abc8-4e09-8c43-abfb619ef4c1" />
+
+Selain toimii!
+
+
+
+<img width="526" height="142" alt="image" src="https://github.com/user-attachments/assets/3b279ca3-f5a9-42e6-b0e4-ff3b61ebf6a5" />
+
+
 
 
 # Lähteet

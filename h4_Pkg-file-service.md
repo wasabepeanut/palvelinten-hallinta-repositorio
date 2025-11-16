@@ -266,11 +266,15 @@ sudo nano /etc/hosts
 Testataan vielä näkyykö webissä.
 
 **example.com**
+
 <img width="490" height="106" alt="image" src="https://github.com/user-attachments/assets/54e213d7-e356-43fa-8bb7-4d5996f8f7b8" />
 
 
 **example.org**
+
 <img width="563" height="108" alt="image" src="https://github.com/user-attachments/assets/5fa97a08-b7db-4f6b-9b17-9cdd20e52f7a" />
+
+Toimii!
 
 
 

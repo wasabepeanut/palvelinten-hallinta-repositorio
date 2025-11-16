@@ -276,6 +276,16 @@ Testataan vielä näkyykö webissä.
 
 Toimii!
 
+Sallitaan vielä käyttäjäoikeudet näille sivuille:
+
+```
+sudo chmod -R 771 /var/www/example.com/public_html/index.html 
+sudo chmod -R 771 /var/www/example.org/public_html/index.html 
+```
+
+<img width="791" height="97" alt="image" src="https://github.com/user-attachments/assets/5ddf1663-2c51-4143-80f6-d3b2c1835f81" />
+
+Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 
 
 # Lähteet

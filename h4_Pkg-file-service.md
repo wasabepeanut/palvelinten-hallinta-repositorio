@@ -119,6 +119,34 @@ ssh -p 8888 kingbob@10.0.2.15
 Toimii!
 
 # b) Apache & Name Based Virtual Host
+Tässä tehtävässä käytän apuna netistä löytyviä [Apachen](https://www.geeksforgeeks.org/techtips/install-apache-web-server-in-linux/) ja [Virtual Hostin](https://www.geeksforgeeks.org/linux-unix/how-to-setup-virtual-hosts-with-apache-web-server-on-linux/) asennus ohjeita sekä tekoälyä (ChatGPT).
+
+Ensin asennetaan Apache:
+```
+sudo apt update
+sudo apt upgrade -y
+sudo apt install apache2 -y
+```
+
+Käynnistetään ja tarkistetaan että se meni päälle:
+```
+sudo systemctl enable apache2
+sudo systemctl status apache2
+```
+**KUVA**
+
+```
+sudo tee /etc/apache2/sites-available/web.testingserver.com.conf > /dev/null << 'EOF'
+<VirtualHost *:80>
+    ServerName web.testingserver.com
+    DocumentRoot /var/www/html/website
+    DirectoryIndex index.html
+    ErrorLog ${APACHE_LOG_DIR}/web.testingserver.com_error.log
+    CustomLog ${APACHE_LOG_DIR}/web.testingserver.com_access.log combined
+</VirtualHost>
+EOF
+
+```
 
 
 # Lähteet

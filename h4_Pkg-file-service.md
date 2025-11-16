@@ -215,6 +215,53 @@ sudo tee /var/www/example.org/public_html/index.html > /dev/null << EOF
 EOF
 ```
 
+Luodaan konfigurointitiedostot Virtual Hosteille:
+
+**example.com**
+```
+sudo nano /etc/apache2/sites-available/example.com.conf
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/example.com_error.log
+    CustomLog ${APACHE_LOG_DIR}/example.com_access.log combined
+</VirtualHost>
+```
+
+
+**example.org**
+```
+sudo nano /etc/apache2/sites-available/example.org.conf
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@example.org
+    ServerName example.org
+    ServerAlias www.example.org
+    DocumentRoot /var/www/example.org/public_html
+    ErrorLog ${APACHE_LOG_DIR}/example.org_error.log
+    CustomLog ${APACHE_LOG_DIR}/example.org_access.log combined
+</VirtualHost>
+```
+
+Otetaan Virtual Hostit käyttöön:
+```
+sudo a2ensite example.com.conf
+sudo a2ensite example.org.conf
+sudo systemctl restart apache2
+```
+
+Lisätään vielä verkkotunnukset osoittamaan local hostiin:
+
+```
+sudo nano /etc/hosts
+
+127.0.0.1  example.com example.org
+```
+
+
 
 # Lähteet
 Karvinen, T. 3.4.2018. Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port. Tero Karvinen. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh. Luettu: 16.11.2025.

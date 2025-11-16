@@ -261,6 +261,17 @@ sudo nano /etc/hosts
 127.0.0.1  example.com example.org
 ```
 
+<img width="400" height="101" alt="image" src="https://github.com/user-attachments/assets/f3d97068-9ed9-475c-b2b7-22600f63f217" />
+
+Testataan vielä näkyykö webissä.
+
+**example.com**
+<img width="490" height="106" alt="image" src="https://github.com/user-attachments/assets/54e213d7-e356-43fa-8bb7-4d5996f8f7b8" />
+
+
+**example.org**
+<img width="563" height="108" alt="image" src="https://github.com/user-attachments/assets/5fa97a08-b7db-4f6b-9b17-9cdd20e52f7a" />
+
 
 
 # Lähteet

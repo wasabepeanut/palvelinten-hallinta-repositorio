@@ -283,7 +283,7 @@ sudo chmod -R 777 /var/www/example.com/public_html/index.html
 sudo chmod -R 777 /var/www/example.org/public_html/index.html 
 ```
 
-<img width="791" height="97" alt="image" src="https://github.com/user-attachments/assets/5ddf1663-2c51-4143-80f6-d3b2c1835f81" />
+<img width="792" height="132" alt="image" src="https://github.com/user-attachments/assets/1e85314f-0762-42af-aa51-0a36d1def4dd" />
 
 Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 

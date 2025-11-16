@@ -176,9 +176,35 @@ Siirryin selaimen puolelle ja menin osoitteeseen 'http://localhost/test_website/
 
 Selain toimii!
 
+Asennetaan vielä Virtual host:
 
+```
+sudo mkdir -p /var/www/example.com/public_html
+sudo mkdir -p /var/www/example.org/public_html
+```
 
+Muokataan oikeudet:
 
+```
+sudo chown -R $USER:$USER /var/www/example.com/public_html
+sudo chown -R $USER:$USER /var/www/example.org/public_html
+sudo chmod -R 755 /var/www
+```
+
+Luodaan molemmille hakemistoille index.html tiedostot testaamista varten:
+
+```
+cd /var/www/example.com/public_html
+nano index.html
+```
+
+sudo tee /var/www/example.com/public_html/index.html > /dev/null << EOF
+<html>
+  <body>
+     <h1>Welcome to example.com!</h1>
+  </body>
+</html>
+EOF
 
 
 

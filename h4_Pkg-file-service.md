@@ -193,15 +193,23 @@ sudo chmod -R 755 /var/www
 
 Luodaan molemmille hakemistoille index.html tiedostot testaamista varten:
 
-```
-cd /var/www/example.com/public_html
-nano index.html
-```
+**example.com**
 ```
 sudo tee /var/www/example.com/public_html/index.html > /dev/null << EOF
 <html>
   <body>
      <h1>Welcome to example.com!</h1>
+  </body>
+</html>
+EOF
+```
+
+**example.org**
+```
+sudo tee /var/www/example.org/public_html/index.html > /dev/null << EOF
+<html>
+  <body>
+     <h1>Welcome to example.org!</h1>
   </body>
 </html>
 EOF

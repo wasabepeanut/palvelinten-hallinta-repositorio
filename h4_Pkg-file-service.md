@@ -17,7 +17,7 @@
 
 
 # a) SSHouto
-Käytin tässä tehtävässä apuna sekä Teron ohjeita että tekoälyä (ChatGPT).
+Käytin tässä tehtävässä apuna sekä [Teron ohjeita](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh) että tekoälyä (ChatGPT). Tein tehtävän Debian 13 Trixie virtuaalikoneella.
 
 Heti aluksi loin ensin uuden kansion moduulille:
 
@@ -118,6 +118,7 @@ ssh -p 8888 kingbob@10.0.2.15
 
 Toimii!
 
+# b) Apache & Name Based Virtual Host
 
 
 # Lähteet

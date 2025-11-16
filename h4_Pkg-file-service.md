@@ -276,7 +276,7 @@ Testataan vielä näkyykö webissä.
 
 Toimii!
 
-Sallitaan vielä käyttäjäoikeudet näille sivuille:
+Muokataan tiedoston oikeuksia:
 
 ```
 sudo chmod -R 777 /var/www/example.com/public_html/index.html 

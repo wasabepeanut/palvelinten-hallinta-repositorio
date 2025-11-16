@@ -354,6 +354,7 @@ INSERT INTO test_table (name, age) VALUES ('Bob', 32);
 SELECT * FROM test_table;
 ```
 
+<img width="435" height="152" alt="image" src="https://github.com/user-attachments/assets/60439063-935e-429a-ba14-312377f5f631" />
 
 
 

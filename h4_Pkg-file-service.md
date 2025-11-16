@@ -287,11 +287,62 @@ sudo chmod -R 777 /var/www/example.org/public_html/index.html
 
 Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 
+# d) PostgreSQL
+Tässä tehtävässä käytän apuna [Alessio Ligabuen ohjeita](https://www.alessioligabue.it/en/blog/install-postgresql-debian-13) sekä tekoälyä (ChatGPT).
+
+Aloitetaan asennus ja tarkistetaan tilanne:
+
+```
+sudo apt install postgresql postgresql-contrib -y
+sudo systemctl status postgresql.service
+```
+
+Asennuksen yhteydessä luodaan nähtävästi automaattisesti käyttäjä **postgres**. Vaihdetaan käyttäjää ja yhdistetään PostgreSQL:ään:
+
+```
+su postgres
+```
+Komennon jälkeen kysytään salasanaa, jota en löytänyt mistään. ChatGPT ehdotti erilaista komentoa, joka ei vaadi salasanaa:
+
+```
+sudo -i -u postgres
+psql
+```
+
+Nyt kun päästiin sisälle asetetaan postgres käyttäjälle salasana psql:n sisällä, mikä on hyvin olennainen osa PostgreSQL:ää:
+
+```
+ALTER USER postgres WITH PASSWORD 'yourStrongPassword';
+```
+
+Luodaan nyt uusi käyttäjä ja uusi tietokanta:
+
+```
+CREATE USER myuser WITH PASSWORD 'aPasswordForMyuser';
+CREATE DATABASE mydatabase OWNER myuser;
+```
+
+Varmuuden vuoksi annetaan käyttäjälle vielä kaikki oikeudet tietokantaan:
+
+```
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
+```
+
+Seuraavaksi palataan takaisin Linuxiin (\q ja exit) ja testataan yhdistämistä luomaani tietokantaan:
+
+```
+psql -U myuser -d mydatabase -h localhost
+```
+
+
 
 # Lähteet
+
 
 Geeksforgeeks. 23.7.2025. How to Install Apache Web Server in Linux: Ubuntu, Fedora, RHEL?. GeeksforGeeks. Luettavissa: https://www.geeksforgeeks.org/techtips/install-apache-web-server-in-linux/. Luettu: 17.11.2025.
 
 Geeksforgeeks. 23.7.2025. How to Setup Virtual Hosts with Apache Web Server on Linux?. GeeksforGeeks. Luettavissa: https://www.geeksforgeeks.org/linux-unix/how-to-setup-virtual-hosts-with-apache-web-server-on-linux/. Luettu: 17.11.2025.
 
 Karvinen, T. 3.4.2018. Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port. Tero Karvinen. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh. Luettu: 16.11.2025.
+
+Ligabue, A. 18.10.2025. Installing PostgreSQL on Debian 13 Trixie: The Complete Guide. Alessioligabue. Luettavissa: https://www.alessioligabue.it/en/blog/install-postgresql-debian-13. Luettu: 17.11.2025.

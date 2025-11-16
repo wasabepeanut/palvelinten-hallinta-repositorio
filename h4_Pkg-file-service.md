@@ -146,6 +146,10 @@ sudo tee /etc/apache2/sites-available/web.testingserver.com.conf > /dev/null << 
 </VirtualHost>
 EOF
 
+
+sudo chown -R www-data:www-data /var/www/html/test_website
+sudo chmod -R 755 /var/www/html/test_website
+
 ```
 
 

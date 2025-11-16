@@ -336,6 +336,27 @@ psql -U myuser -d mydatabase -h localhost
 
 <img width="796" height="147" alt="image" src="https://github.com/user-attachments/assets/dced65d3-0090-4fd2-a441-4e4184229cf8" />
 
+Toimii!
+Pyysin ChatGPT:tä auttamaan tekemään lisätestejä tietokannan sisällä.
+
+Luodaan testaamisen vuoksi uusi taulu:
+
+```
+CREATE TABLE test_table (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+
+INSERT INTO test_table (name, age) VALUES ('Kevin', 56);
+INSERT INTO test_table (name, age) VALUES ('Bob', 32);
+
+SELECT * FROM test_table;
+```
+
+
+
+
 
 # Lähteet
 

@@ -334,8 +334,7 @@ Seuraavaksi palataan takaisin Linuxiin (\q ja exit) ja testataan yhdistämistä 
 psql -U myuser -d mydatabase -h localhost
 ```
 
-<img width="795" height="122" alt="image" src="https://github.com/user-attachments/assets/d2e8243d-dd5c-4c0e-9f52-c71cacdfbd7f" />
-
+<img width="796" height="147" alt="image" src="https://github.com/user-attachments/assets/dced65d3-0090-4fd2-a441-4e4184229cf8" />
 
 
 # Lähteet

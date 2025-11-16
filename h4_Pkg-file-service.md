@@ -287,7 +287,7 @@ sudo chmod -R 777 /var/www/example.org/public_html/index.html
 
 Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 
-# d) PostgreSQL
+# e) PostgreSQL
 Tässä tehtävässä käytän apuna [Alessio Ligabuen ohjeita](https://www.alessioligabue.it/en/blog/install-postgresql-debian-13) sekä tekoälyä (ChatGPT).
 
 Aloitetaan asennus ja tarkistetaan tilanne:

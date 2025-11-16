@@ -165,7 +165,10 @@ Koska minulla on palomuuri (**ufw**) käytössä, sallitaan vielä Apache:
 ```
 sudo ufw allow 'Apache'
 sudo ufw reload
+sudo ufw status 
 ```
+
+<img width="526" height="142" alt="image" src="https://github.com/user-attachments/assets/3b279ca3-f5a9-42e6-b0e4-ff3b61ebf6a5" />
 
 Siirryin selaimen puolelle ja menin osoitteeseen 'http://localhost/test_website/'.
 
@@ -175,7 +178,6 @@ Selain toimii!
 
 
 
-<img width="526" height="142" alt="image" src="https://github.com/user-attachments/assets/3b279ca3-f5a9-42e6-b0e4-ff3b61ebf6a5" />
 
 
 

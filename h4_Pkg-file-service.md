@@ -289,4 +289,9 @@ Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 
 
 # Lähteet
+
+Geeksforgeeks. 23.7.2025. How to Install Apache Web Server in Linux: Ubuntu, Fedora, RHEL?. GeeksforGeeks. Luettavissa: https://www.geeksforgeeks.org/techtips/install-apache-web-server-in-linux/. Luettu: 17.11.2025.
+
+Geeksforgeeks. 23.7.2025. How to Setup Virtual Hosts with Apache Web Server on Linux?. GeeksforGeeks. Luettavissa: https://www.geeksforgeeks.org/linux-unix/how-to-setup-virtual-hosts-with-apache-web-server-on-linux/. Luettu: 17.11.2025.
+
 Karvinen, T. 3.4.2018. Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port. Tero Karvinen. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh. Luettu: 16.11.2025.

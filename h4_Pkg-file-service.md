@@ -197,7 +197,7 @@ Luodaan molemmille hakemistoille index.html tiedostot testaamista varten:
 cd /var/www/example.com/public_html
 nano index.html
 ```
-
+```
 sudo tee /var/www/example.com/public_html/index.html > /dev/null << EOF
 <html>
   <body>
@@ -205,7 +205,7 @@ sudo tee /var/www/example.com/public_html/index.html > /dev/null << EOF
   </body>
 </html>
 EOF
-
+```
 
 
 # Lähteet

@@ -4,6 +4,7 @@
 - Virtuaalikoneen käyttöjärjestelmä: Debian 13 Trixie
 
 
+
 # x) Lue ja tiivistä
 ## Pkg-File-Service
 - Konfiguraationhallintajärjestelmillä voi hallita suuria määriä daemoneja, yleisin malli tähän on **pkg-file-service**.
@@ -14,6 +15,7 @@
 - Vaiheiden jälkeen uusi konfiguraatio on käyttövalmis.
 
 (Karvinen, T 3.4.2018)
+
 
 
 # a) SSHouto
@@ -117,6 +119,8 @@ ssh -p 8888 kingbob@10.0.2.15
 <img width="798" height="175" alt="image" src="https://github.com/user-attachments/assets/977618a1-59ac-4ef3-8f06-190b0a8b703d" />
 
 Toimii!
+
+
 
 # b) Apache & Name Based Virtual Host
 Tässä tehtävässä käytän apuna netistä löytyviä [Apachen](https://www.geeksforgeeks.org/techtips/install-apache-web-server-in-linux/) ja [Virtual Hostin](https://www.geeksforgeeks.org/linux-unix/how-to-setup-virtual-hosts-with-apache-web-server-on-linux/) asennus ohjeita sekä tekoälyä (ChatGPT).
@@ -286,6 +290,71 @@ sudo chmod -R 777 /var/www/example.org/public_html/index.html
 <img width="792" height="132" alt="image" src="https://github.com/user-attachments/assets/1e85314f-0762-42af-aa51-0a36d1def4dd" />
 
 Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
+
+
+
+# d) Nginx
+
+```
+sudo apt -y install nginx
+sudo nano /etc/nginx/sites-available/default
+server_name localhost;
+```
+
+**KUVA**
+
+Sallitaan nginx palomuurin läpi:
+
+```
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+```
+
+Taisin unohtaa sammuttaa Apachen ennen nginx:in käynnistämistä.
+
+```
+sudo systemctl stop apache2
+sudo systemctl disable apache2
+sudo systemctl start nginx
+sudo systemctl status nginx
+```
+
+Muokataan konfigurointitiedostoa:
+
+```
+sudo nano /etc/nginx/sites-available/default
+
+server {
+    listen 80;
+    server_name localhost;
+
+    root /home/duy/www;  
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+Luodaan testiä varten uusi hakemisto ja sinne index.html tiedosto.
+
+```
+sudo mkdir -p /home/duy/www
+sudo nano /home/duy/www/index.html
+```
+
+**KUVA BASIC HTML**
+
+Annetaan käyttäjälle vielä oikeudet ja käynnistetään nginx uudelleen:
+
+```
+sudo chown -R duy:www-data /home/duy/www
+sudo chmod -R 755 /home/duy/www
+sudo systemctl reload nginx
+```
+
+
 
 # e) PostgreSQL
 Tässä tehtävässä käytän apuna [Alessio Ligabuen ohjeita](https://www.alessioligabue.it/en/blog/install-postgresql-debian-13) sekä tekoälyä (ChatGPT).

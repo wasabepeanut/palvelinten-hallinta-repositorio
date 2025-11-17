@@ -340,33 +340,6 @@ sudo systemctl start nginx
 sudo systemctl status nginx
 ```
 
-Muokataan konfigurointitiedostoa:
-
-```
-sudo nano /etc/nginx/sites-available/default
-
-server {
-    listen 80;
-    server_name localhost;
-
-    root /home/duy/www;  
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
-```
-
-Luodaan testiä varten uusi hakemisto ja sinne index.html tiedosto.
-
-```
-sudo mkdir -p /home/duy/www
-sudo nano /home/duy/www/index.html
-```
-
-**KUVA BASIC HTML**
-
 Annetaan käyttäjälle vielä oikeudet ja käynnistetään nginx uudelleen:
 
 ```

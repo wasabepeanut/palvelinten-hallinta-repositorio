@@ -452,3 +452,5 @@ Geeksforgeeks. 23.7.2025. How to Setup Virtual Hosts with Apache Web Server on L
 Karvinen, T. 3.4.2018. Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port. Tero Karvinen. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh. Luettu: 16.11.2025.
 
 Ligabue, A. 18.10.2025. Installing PostgreSQL on Debian 13 Trixie: The Complete Guide. Alessioligabue. Luettavissa: https://www.alessioligabue.it/en/blog/install-postgresql-debian-13. Luettu: 17.11.2025.
+
+Server-world. 12.9.2025. Nginx : Install. Server-world.info. Luettavissa: https://www.server-world.info/en/note?os=Debian_13&p=nginx&f=1. Luettu: 17.11.2025.

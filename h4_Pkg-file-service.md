@@ -294,35 +294,15 @@ Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 
 
 # d) Nginx
+Käytin tässä tehtävässä [Server Worldin ohjeita](https://www.server-world.info/en/note?os=Debian_13&p=nginx&f=1) ja tekoälyä (ChatGPT).
 
-```
-cat << EOF > /home/username/www/index.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Test Page</title>
-</head>
-<body>
-<h1>Hello from Nginx!</h1>
-<p>This page is served from /home/username/www</p>
-</body>
-</html>
-EOF
-
-```
-
-
-
-
+Aloitetaan asennus:
 
 ```
 sudo apt -y install nginx
 sudo nano /etc/nginx/sites-available/default
 server_name localhost;
 ```
-
-**KUVA**
 
 Sallitaan nginx palomuurin läpi:
 
@@ -336,19 +316,46 @@ Taisin unohtaa sammuttaa Apachen ennen nginx:in käynnistämistä.
 ```
 sudo systemctl stop apache2
 sudo systemctl disable apache2
-sudo systemctl start nginx
+```
+
+Jostain syystä nettisivulla näkyy vieläkin Apache2 oletussivu. Käydään muokkaamassa konfigurointitiedostoa.
+
+```
+index index.nginx-debian.html;
+```
+
+**INDEX KOHTA KUVA**
+
+Vieläkään ei toimi. ChatGPT:n mukaan syynä johtuu se, että Apache on vielä käynnissä samassa portissa (80). Kokeilen saanko korjattua.
+
+```
+sudo lsof -i :80
+```
+
+**KUVA PORTEISTA**
+
+Näyttäisi olevan ok.
+
+```
+sudo systemctl stop apache2
+sudo systemctl disable apache2
+sudo systemctl restart nginx
 sudo systemctl status nginx
 ```
 
-Annetaan käyttäjälle vielä oikeudet ja käynnistetään nginx uudelleen:
+Nginx on käynnissä.
 
 ```
-sudo chown -R duy:www-data /home/duy/www
-sudo chmod -R 755 /home/duy/www
-sudo systemctl reload nginx
+sudo netstat -tulpn | grep :80
 ```
 
+Kaikki ok.
 
+Testataan uudelleen.
+
+**KUVA**
+
+Toimii! Tässä tehtävässä jouduin aika pitkään tekemään vianmääritystä, koska webbi ei suostunut jostain syystä näkymään. Sain kuitenkin selville lopulta miksi ja merkittävin tekijä tässä mielestäni oli komennolla `sudo systemctl **restart** nginx`. Tämä komento eroaa hieman **reload**-komennosta siten, että se pysäyttää ja katkaisee kaikki toiminnot ja yhteydet ennen kuin käynnistää sen uudelleen (ChatGPT). Tämän jälkeen yhteys Apacheen katkesi ja Nginx toimi. 
 
 # e) PostgreSQL
 Tässä tehtävässä käytän apuna [Alessio Ligabuen ohjeita](https://www.alessioligabue.it/en/blog/install-postgresql-debian-13) sekä tekoälyä (ChatGPT).

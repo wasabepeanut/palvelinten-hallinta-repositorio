@@ -359,7 +359,14 @@ Testataan uudelleen.
 
 <img width="877" height="335" alt="image" src="https://github.com/user-attachments/assets/e544d14e-c878-40c7-973e-4da7c25d0663" />
 
-Toimii! 
+Toimii vihdoin! 
+
+Muutetaan lopuksi vielä oikeuksia:
+
+```
+sudo chown duy:www-data /var/www/html/index.nginx-debian.html
+sudo chmod 644 /var/www/html/index.nginx-debian.html
+```
 
 Tässä tehtävässä jouduin aika pitkään tekemään vianmääritystä, koska webbi ei suostunut jostain syystä näkymään. Sain kuitenkin selville lopulta miksi ja merkittävin tekijä tässä mielestäni oli komennolla `sudo systemctl **restart** nginx`. Tämä komento eroaa hieman **reload**-komennosta siten, että se pysäyttää ja katkaisee kaikki toiminnot ja yhteydet ennen kuin käynnistää sen uudelleen (ChatGPT). Tämän jälkeen yhteys Apacheen katkesi ja Nginx toimi. 
 

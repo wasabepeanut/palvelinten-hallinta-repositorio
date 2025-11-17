@@ -296,6 +296,27 @@ Nyt käyttäjäoikeuksillakin pystyy muokkaamaan nettisivuja.
 # d) Nginx
 
 ```
+cat << EOF > /home/username/www/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Test Page</title>
+</head>
+<body>
+<h1>Hello from Nginx!</h1>
+<p>This page is served from /home/username/www</p>
+</body>
+</html>
+EOF
+
+```
+
+
+
+
+
+```
 sudo apt -y install nginx
 sudo nano /etc/nginx/sites-available/default
 server_name localhost;

@@ -316,6 +316,8 @@ Taisin unohtaa sammuttaa Apachen ennen nginx:in käynnistämistä.
 ```
 sudo systemctl stop apache2
 sudo systemctl disable apache2
+sudo systemctl start nginx
+sudo systemctl status nginx
 ```
 
 Jostain syystä nettisivulla näkyy vieläkin Apache2 oletussivu. Käydään muokkaamassa konfigurointitiedostoa.

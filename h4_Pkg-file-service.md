@@ -320,13 +320,13 @@ sudo systemctl start nginx
 sudo systemctl status nginx
 ```
 
-Jostain syystä nettisivulla näkyy vieläkin Apache2 oletussivu. Käydään muokkaamassa konfigurointitiedostoa.
+Jostain syystä kun testasin selainta, nettisivulla näkyi vieläkin Apache2 oletussivu. Käydään muokkaamassa konfigurointitiedostoa.
 
 ```
 index index.nginx-debian.html;
 ```
 
-**INDEX KOHTA KUVA**
+<img width="495" height="78" alt="image" src="https://github.com/user-attachments/assets/4f463870-96b1-4df0-8db1-ce34cac44d4d" />
 
 Vieläkään ei toimi. ChatGPT:n mukaan syynä johtuu se, että Apache on vielä käynnissä samassa portissa (80). Kokeilen saanko korjattua.
 
@@ -334,7 +334,7 @@ Vieläkään ei toimi. ChatGPT:n mukaan syynä johtuu se, että Apache on vielä
 sudo lsof -i :80
 ```
 
-**KUVA PORTEISTA**
+<img width="720" height="282" alt="image" src="https://github.com/user-attachments/assets/167f05cf-6c1a-40e3-92da-917c869b4348" />
 
 Näyttäisi olevan ok.
 
@@ -351,13 +351,17 @@ Nginx on käynnissä.
 sudo netstat -tulpn | grep :80
 ```
 
+<img width="750" height="111" alt="image" src="https://github.com/user-attachments/assets/93e47959-107f-4041-9b35-533a7a0edff8" />
+
 Kaikki ok.
 
 Testataan uudelleen.
 
-**KUVA**
+<img width="877" height="335" alt="image" src="https://github.com/user-attachments/assets/e544d14e-c878-40c7-973e-4da7c25d0663" />
 
-Toimii! Tässä tehtävässä jouduin aika pitkään tekemään vianmääritystä, koska webbi ei suostunut jostain syystä näkymään. Sain kuitenkin selville lopulta miksi ja merkittävin tekijä tässä mielestäni oli komennolla `sudo systemctl **restart** nginx`. Tämä komento eroaa hieman **reload**-komennosta siten, että se pysäyttää ja katkaisee kaikki toiminnot ja yhteydet ennen kuin käynnistää sen uudelleen (ChatGPT). Tämän jälkeen yhteys Apacheen katkesi ja Nginx toimi. 
+Toimii! 
+
+Tässä tehtävässä jouduin aika pitkään tekemään vianmääritystä, koska webbi ei suostunut jostain syystä näkymään. Sain kuitenkin selville lopulta miksi ja merkittävin tekijä tässä mielestäni oli komennolla `sudo systemctl **restart** nginx`. Tämä komento eroaa hieman **reload**-komennosta siten, että se pysäyttää ja katkaisee kaikki toiminnot ja yhteydet ennen kuin käynnistää sen uudelleen (ChatGPT). Tämän jälkeen yhteys Apacheen katkesi ja Nginx toimi. 
 
 # e) PostgreSQL
 Tässä tehtävässä käytän apuna [Alessio Ligabuen ohjeita](https://www.alessioligabue.it/en/blog/install-postgresql-debian-13) sekä tekoälyä (ChatGPT).

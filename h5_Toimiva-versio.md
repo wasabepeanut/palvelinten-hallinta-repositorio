@@ -181,6 +181,32 @@ Testataan vielä onko idempotentti.
 👍
 
 
+
+# g) Se toinen järjestelmä
+Tässä tehtävässä testataan gittiä toisella järjestelmällä kuin sillä millä tein tehtävät (Linux).
+Kokeillaan vaikka Windowsilla. Tein tämän tehtävän VSCodella.
+
+Aluksi loin testaamista varten uuden kansion "test" ja avasin kansion VSCodella.
+Siirryin VSCodessa komentokehotteeseen (powershell) ja kloonasin repositorion normaaliin tapaan.
+
+Avasin README.md:n ja lisäsin sinne tekstiä.
+
+<img width="423" height="187" alt="image" src="https://github.com/user-attachments/assets/118fb587-eabe-4ed4-ab05-f66cc7a2fe77" />
+
+suoritin `git add .` ja `git commit` ja hyväksyin commit viestin.
+
+<img width="1020" height="328" alt="image" src="https://github.com/user-attachments/assets/9ceae508-f7e0-485a-b418-f6c069e10189" />
+
+Lopuksi `git pull` ja `git push`
+
+Katsotaan näkyykö muutos selaimella.
+
+<img width="903" height="584" alt="image" src="https://github.com/user-attachments/assets/563f9a67-8719-4bbd-9189-a151b63c34b7" />
+
+👍
+
+
+
 # h) Yhteistyötä
 Tässä tehtävässä oli tarkoituksena harjoitella parin kanssa git komentojen suorittamista yhteiseen repositorioon.
 Teimme tämän tehtävän luennon aikana 18.11.2025.
@@ -193,6 +219,9 @@ Tämän jälkeen molemmat teimme muutoksia README tiedostoon ja puskettiin ne.
 
 Kuten kuvasta huomaa, pari oli tehnyt commitin "Add nonsense" ja lisännyt random tekstiä ja itse tein commitin "hello from vbox".
 
+<img width="913" height="505" alt="image" src="https://github.com/user-attachments/assets/a37e3e6e-f7b3-40e9-971f-e9a7f12f5a7e" />
+
+Tältä repositorio näyttää selaimella.
 
 
 

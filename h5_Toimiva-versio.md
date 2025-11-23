@@ -174,7 +174,11 @@ sudo salt-call --local --file-root snowSalts state.apply
 
 <img width="991" height="493" alt="image" src="https://github.com/user-attachments/assets/b06325fc-c28e-44d4-a942-a8186516e25c" />
 
+Testataan vielä onko idempotentti.
 
+<img width="997" height="347" alt="image" src="https://github.com/user-attachments/assets/10111f77-1370-46da-ae9d-19dff1410a5b" />
+
+👍
 
 
 # Lähteet

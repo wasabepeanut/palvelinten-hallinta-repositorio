@@ -96,6 +96,23 @@ Kuten kuvassa näkyy, puskeminen onnistui!
 
 # c) Doh!
 
+```
+ls
+rm README.md
+ls
+```
+
+O-ou. Vahingossa poistin README.md tiedostoni. 😲
+
+```
+git reset --hard
+ls
+```
+
+<img width="601" height="196" alt="image" src="https://github.com/user-attachments/assets/98c06634-06c6-49a8-b4d0-492d482d3f79" />
+
+Huh.😌
+
 
 
 # d) Tukki

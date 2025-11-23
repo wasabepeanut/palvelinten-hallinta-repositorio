@@ -181,6 +181,21 @@ Testataan vielä onko idempotentti.
 👍
 
 
+# h) Yhteistyötä
+Tässä tehtävässä oli tarkoituksena harjoitella parin kanssa git komentojen suorittamista yhteiseen repositorioon.
+Teimme tämän tehtävän luennon aikana 18.11.2025.
+
+Loin aluksi normaaliintapaan repositorion ja jaoin oikeudet parilleni.
+
+Tämän jälkeen molemmat teimme muutoksia README tiedostoon ja puskettiin ne.
+
+<img width="883" height="708" alt="image" src="https://github.com/user-attachments/assets/30ad2c6c-9c67-4cc4-9bd0-a6d46abf9d45" />
+
+Kuten kuvasta huomaa, pari oli tehnyt commitin "Add nonsense" ja lisännyt random tekstiä ja itse lisäsin terveiset.
+
+
+
+
 # Lähteet
 Chacon, S. & Straub, B. 2024. Pro Git book. 1.3: Getting Started - What is Git?. Git. Luettavissa: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F. Luettu: 23.11.2025.
 

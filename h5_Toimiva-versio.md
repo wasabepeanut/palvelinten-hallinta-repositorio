@@ -188,6 +188,7 @@ Kokeillaan vaikka Windowsilla. Tein tämän tehtävän VSCodella.
 
 Aluksi loin testaamista varten uuden kansion "test" ja avasin kansion VSCodella.
 Siirryin VSCodessa komentokehotteeseen (powershell) ja kloonasin repositorion normaaliin tapaan.
+Tämän jälkeen avasin repositorion kansion VSCodella.
 
 Avasin README.md:n ja lisäsin sinne tekstiä.
 

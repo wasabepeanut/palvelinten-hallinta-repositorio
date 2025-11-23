@@ -117,6 +117,9 @@ Huh.😌
 
 # d) Tukki
 
+<img width="887" height="712" alt="image" src="https://github.com/user-attachments/assets/24af1254-9b8c-4bb6-b583-a5385cc2d9ad" />
+
+
 # Lähteet
 Chacon, S. & Straub, B. 2024. Pro Git book. 1.3: Getting Started - What is Git?. Git. Luettavissa: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F. Luettu: 23.11.2025.
 

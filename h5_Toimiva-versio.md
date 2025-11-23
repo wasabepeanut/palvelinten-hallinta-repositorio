@@ -37,3 +37,12 @@
 
 # Lähteet
 Chacon, S. & Straub, B. 2024. Pro Git book. 1.3: Getting Started - What is Git?. Git. Luettavissa: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F. Luettu: 23.11.2025.
+
+
+https://git-scm.com/docs/git-add
+
+https://git-scm.com/docs/git-commit
+
+https://git-scm.com/docs/git-pull
+
+https://git-scm.com/docs/git-push

@@ -58,6 +58,47 @@ Tässä tehtävässä luodaan repositorio GitHubiin, jonka nimessä ja sisältö
 
 Lopuksi painoin luo repositorio.
 
+<img width="1240" height="563" alt="image" src="https://github.com/user-attachments/assets/3690c5e3-8b61-4329-8bf8-2970cf74e781" />
+
+❄️❄️❄️
+
+
+
+# b) Dolly
+Tässä tehtävässä testataan juuri luomaamme repositoriota. 
+(Ennen tätä olin myös lisännyt julkisen SSH-avaimeni GitHub käyttäjälleni ja muuttanut kansion omistajaa userille).
+
+```
+ssh-keygen
+# kopioi julkinen avain GitHub profiiliin
+cat .ssh/id_ed25519.pub
+
+# muutetaan kansion ja tiedostojen omistajaa
+sudo chown -R $USER:$USER /home/duy/coding
+```
+
+Kloonasin aluksi repositorion virtuaalikoneelleni komennolla `git clone git@github.com:wasabepeanut/snowtest_repository.git` (SSH linkki).
+
+Tämän jälkeen siirryin README tiedostoon, kirjoitin sinne jotain ja suoritin seuraavat komennot:
+
+```
+git add .
+git commit
+git pull
+git push
+```
+
+<img width="438" height="230" alt="image" src="https://github.com/user-attachments/assets/2481ac50-dca9-445c-a4e2-dc6a89637d32" />
+
+Kuten kuvassa näkyy, puskeminen onnistui!
+
+
+
+# c) Doh!
+
+
+
+# d) Tukki
 
 # Lähteet
 Chacon, S. & Straub, B. 2024. Pro Git book. 1.3: Getting Started - What is Git?. Git. Luettavissa: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F. Luettu: 23.11.2025.

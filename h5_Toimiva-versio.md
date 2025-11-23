@@ -22,7 +22,6 @@
 
 
 ## git komentoja
-
 **git add**
 - Lisätään uudet tai muutetut tiedostot valmistelualueeseen (**staging area**).
 
@@ -95,7 +94,6 @@ Kuten kuvassa näkyy, puskeminen onnistui!
 
 
 # c) Doh!
-
 ```
 ls
 rm README.md
@@ -116,8 +114,55 @@ Huh.😌
 
 
 # d) Tukki
-
 <img width="887" height="712" alt="image" src="https://github.com/user-attachments/assets/24af1254-9b8c-4bb6-b583-a5385cc2d9ad" />
+
+Käydään läpi hieman repositorion logia. Repositorioon on tehty 2 muutosta (commit) molemmat sunnuntaina 23.11.
+
+Ensimmäisessä commitissa on lisätty GNU lisenssi ja sen mukana tulleet tekstirivit. Toisessa commitissa on lisätty teksti "Hello from VirtualBox." README tiedostoon.
+
+Molemmat commitit on tehnyt author: wasabepeanut.
+
+Muuta tärkeää ihmeteltävää tässä ei oikein ole.
+
+
+
+# e) Suolattu rakki
+Tässä tehtävässä testataan Salt-komentoja omasta repositoriosta.
+
+Aluksi luodaan repositorioon uusi kansio:
+
+```
+mkdir snowSalts
+cd snowSalts
+```
+
+Sitten lisätään sinne **top.sls** tiedosto ja vielä yksi kansio, jonka sisälle **init.sls** tiedosto:
+
+**top.sls**
+```
+nano top.sls
+
+# sisältö
+base:
+  '*':
+    - favourites
+```
+
+
+**favourites**
+```
+mkdir favourites
+cd favourites
+nano init.sls
+
+# sisältö
+favourite-packages:
+  pkg.installed:
+    - pkgs:
+      - tree
+      - cowsay
+```
+
 
 
 # Lähteet

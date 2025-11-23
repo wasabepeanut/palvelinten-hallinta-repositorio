@@ -148,6 +148,7 @@ base:
     - favourites
 ```
 
+<img width="191" height="87" alt="image" src="https://github.com/user-attachments/assets/279b47f6-fca1-4e49-bf9b-d1e5567a0666" />
 
 **favourites**
 ```
@@ -162,6 +163,17 @@ favourite-packages:
       - tree
       - cowsay
 ```
+
+<img width="191" height="122" alt="image" src="https://github.com/user-attachments/assets/73d64458-bfc5-4437-b4f6-13cc5e03b940" />
+
+Lopuksi suoritetaan statet.
+
+```
+sudo salt-call --local --file-root snowSalts state.apply
+```
+
+<img width="991" height="493" alt="image" src="https://github.com/user-attachments/assets/b06325fc-c28e-44d4-a942-a8186516e25c" />
+
 
 
 

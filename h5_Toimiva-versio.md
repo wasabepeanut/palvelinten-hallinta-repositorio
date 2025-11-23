@@ -189,9 +189,9 @@ Loin aluksi normaaliintapaan repositorion ja jaoin oikeudet parilleni.
 
 Tämän jälkeen molemmat teimme muutoksia README tiedostoon ja puskettiin ne.
 
-<img width="883" height="708" alt="image" src="https://github.com/user-attachments/assets/30ad2c6c-9c67-4cc4-9bd0-a6d46abf9d45" />
+<img width="700" height="605" alt="image" src="https://github.com/user-attachments/assets/4e615743-78b5-48ca-a88c-d5fda5313190" />
 
-Kuten kuvasta huomaa, pari oli tehnyt commitin "Add nonsense" ja lisännyt random tekstiä ja itse lisäsin terveiset.
+Kuten kuvasta huomaa, pari oli tehnyt commitin "Add nonsense" ja lisännyt random tekstiä ja itse tein commitin "hello from vbox".
 
 
 
